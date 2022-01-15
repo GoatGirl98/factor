@@ -1,6 +1,6 @@
 # factor
 
-Fast prime factorization in Python. Factors most 50-60 digit numbers within a minute or so (with PyPy).  
+Fast prime factorization in Python. Factors most 50-60 digit numbers within a minute or so (with PyPy2).  
 The algorithm used depends on the size of the input
 
 * `pollardPm1.py` contains an implementation of the large prime (two stage) variant of Pollard's _p-1_ algorithm.
@@ -62,6 +62,47 @@ and another...
 	37897387397398739739826929827929827927927762729872987928 = 2^3 * 3^1 * 67246307^1 * 4788272261623351^1 * 4904003303934522319753958187821^1
 
 	Time: 24.7774269581 s
+
+# Usage for `main.py` (with Python3)
+
+Integer Factorization with Python3, modified based on this project.
+
+Verified with the following tasks:
+
+- https://loj.ac/p/143 (Test for the function `is_prime`)
+- https://loj.ac/p/6466 (Factoring numbers within 10^30, composed of two big prime factors)
+- https://www.spoj.com/problems/FACT2 (General Integer Factorization for the numbers within 10^29)
+
+## Input
+
+There are several numbers given, each one in a line.
+
+The input ends with a number 0.
+
+(Which is as same as https://www.spoj.com/problems/FACT2)
+
+## Output
+
+For each number, print in a line the factorization of it. See examples below for the output format.
+
+## Sample Input
+
+```
+3111989
+13091989
+2432902008176640000
+77145199750673
+0
+```
+
+## Sample Output
+
+```
+317^1 9817^1
+17^2 89^1 509^1
+2^18 3^8 5^4 7^2 11^1 13^1 17^1 19^1
+328439^1 234884407^1
+```
 
 # References
 * A.O.L Atkin, D.J.Bernstein; [Prime Sieves using Binary Quadratic Forms](http://www.ams.org/journals/mcom/2004-73-246/S0025-5718-03-01501-1/S0025-5718-03-01501-1.pdf); *Mathematics of Computation*, 73-246: 1023-30
